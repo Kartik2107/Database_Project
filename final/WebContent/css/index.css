@@ -1,0 +1,185 @@
+.hero {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.nav{
+background-color: black!important
+}
+.locate{
+color:white !important
+}
+
+.btn-grey{
+    background-color:#D8D8D8;
+	color:#FFF;
+}
+.rating-block{
+	background-color:#FAFAFA;
+	
+	padding:15px 15px 20px 15px;
+	border-radius:3px;
+}
+.bold{
+	font-weight:700;
+}
+.padding-bottom-7{
+	padding-bottom:7px;
+}
+
+.review-block{
+	background-color:#FAFAFA;
+	border:1px solid #EFEFEF;
+	padding:15px;
+	border-radius:3px;
+	margin-bottom:15px;
+}
+.review-block-name{
+	font-size:12px;
+	margin:10px 0;
+}
+.review-block-rate{
+	font-size:20px;
+	
+}
+
+.review-block-title{
+	font-size:15px;
+	font-weight:700;
+	margin-bottom:10px;
+}
+.review-block-description{
+	font-size:16px;
+}
+.rating {
+    float:left;
+  }
+
+  /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+    follow these rules. Every browser that supports :checked also supports :not(), so
+    it doesn’t make the test unnecessarily selective */
+  .rating:not(:checked) > input {
+      position:absolute;
+      top:-9999px;
+      visibility: hidden;
+      clip:rect(0,0,0,0);
+  }
+
+  .rating:not(:checked) > label {
+      float:right;
+      width:1em;
+      /* padding:0 .1em; */
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:300%;
+      /* line-height:1.2; */
+      color:#ddd;
+  }
+
+  .rating:not(:checked) > label:before {
+      content: '★ ';
+  }
+
+  .rating > input:checked ~ label {
+      color: #FFCC33;
+      
+  }
+
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+      color: #FFCC33;
+      
+  }
+
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+      color: #FFCC33;
+      
+  }
+
+  .rating > label:active {
+      position:relative;
+      top:2px;
+      left:2px;
+  }
+  .im{
+    transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+  }
+  .inpu {
+    padding-top: 7px !important
+}
+
+#menu {
+    cursor: zoom-in;
+}
+textarea {
+    resize: none;
+  }
+  .block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4CAF50;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Raleway'
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+

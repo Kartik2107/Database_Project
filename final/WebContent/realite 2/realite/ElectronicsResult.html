@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Buy and Sell : IIT Dharwad</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<meta name="keywords" content="Realtie a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+    function sort(){
+      var x = document.getElementById("filter");
+      x.style.display="none";
+
+      var y = document.getElementById("sort");
+      y.style.display="block";
+    }
+
+    function filter(){
+      var y = document.getElementById("sort");
+      y.style.display="none";
+
+      var x = document.getElementById("filter");
+      x.style.display="block";
+    }
+	</script>
+
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+  <div style="background-color:black;">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="index.html">IIT-Dh : Buy and Sell</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				    aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="fas fa-bars"></i>
+					</span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item ml-xl-2">
+							<a class="nav-link" href="loginPage.html">Home</a>
+						</li>
+						<li class="nav-item ml-xl-2">
+							<a class="nav-link" href="pricing.html">Messages</a>
+						</li>
+						<li class="nav-item ml-xl-2">
+							<a class="nav-link" href="projects.html">Your Ads</a>
+						</li>
+						<li class="nav-item ml-xl-2">
+							<a class="nav-link" href="404.html">Post an Ad</a>
+						</li>
+						<li class="nav-item ml-xl-2">
+							<a class="nav-link" href="projects.html">Profile</a>
+						</li>
+						<li class="nav-item ml-xl-2">
+							<a class="nav-link" href="contact.html">LogOut</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+  </div>
+
+
+  <!--modify search-->
+  <div id="search_form" class="search_top text-center" style="padding-top:20px; padding-bottom:20px; background-color: #00a591;">
+    <h3>Buy what you need, Sell what you don't</h3>
+    <form action="#" method="post" class="ban-form row" style="padding-left:4cm;">
+      <div class="col-md-3 banf">
+        <select class="form-control" id="country12" required>
+          <option value="" disabled selected>Category</option>
+          <option value="0">Electronics</option>
+          <option value="1">Food</option>
+          <option value="2">Cycle</option>
+          <option value="3">Mattress</option>
+          <option value="4">Books</option>
+          <option value="5">Stationary and Others</option>
+        </select>
+      </div>
+      <div class="col-md-3 banf">
+        <input class="form-control" type="text" name="Name" placeholder="Name" required="">
+      </div>
+
+      <div class="col-md-3 banf">
+        <input class="form-control" type="submit" value="Search">
+      </div>
+    </form>
+  </div>
+
+  <!-- Display Results -->
+  <div>
+    <div class="heading">
+      <center>ELECTRONICS</center>
+    </div>
+
+    <!-- selection between filter and sort -->
+    <center>
+    <div class="tabs">
+      <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" style="width:10%; text-align:center">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" onclick="filter()" role="tab" aria-controls="pills-profile" aria-selected="false">Filter</a>
+        </li>
+        <li class="nav-item" style="width:10%; padding-left:8px; text-align:center">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" onclick="sort()" role="tab" aria-controls="pills-profile" aria-selected="false">Sort</a>
+        </li>
+      </ul>
+    </div>
+    </center>
+
+    <div class="sorts" style="display:none" id="sort">
+      <br>
+      <form class="form-inline">
+                <div style="width:35%; float:left">
+                  <center>Price<br>
+                    <input type="radio" name="price"> Low to High </input><br>
+                    <input type="radio" name="price"> High to Low </input><br><br>
+                  </center>
+                </div>
+
+                <div style="width:35%; float:left">
+                  <center>Used<br>
+                    <input type="radio" name="used"> New to Old </input><br>
+                    <input type="radio" name="used"> Old to New </input><br><br>
+                  </center>
+                </div>
+
+                <div style="width:30%; float:left">
+                  <center><button class="search-sort" onclick=submit>Search</button></center><br>
+                </div>
+      </form>
+    </div>
+
+    <div class="filters" style="display:none" id="filter">
+      <br>
+      <form class="form-inline">
+        <div style="width:70%; float:left;">
+        <div class="form-group ">
+          <select class="form-control" style="width:60%; margin-left:30px;" id="cities">
+            <option value="" required selected>Type</option>
+            <option value="1">Mobile</option>
+            <option vlaue="2">Laptop</option>
+            <option value="3">Tablet/Ipad</option>
+            <option value="4">Speakers</option>
+            <option value="5">Headphones/Earphones</option>
+            <option value="6">Accessories</option>
+            <option value="7">Others</option>
+          </select>
+        </div>
+        <br>
+        </div>
+
+
+        <div style="width:30%">
+          <center><button class="search-sort" onclick=submit>Search</button></center><br>
+        </div>
+
+      </form>
+    </div>
+
+  <!-- content -->
+  <div class="content">
+
+    <!-- one-content -->
+    <div class="single-content">
+      <div style="width:100%; height:300px; padding-top:50px" class="form-inline">
+        <div style="width:30%; height:250px">
+          <img style="width:80%; height:250px; border-radius:10px;" src="images/iphone.jpg" alt="">
+        </div>
+        <div style="width:70%; height:250px">
+          <h3>Apple iPhone X (Silver, 3GB RAM, 64GB Storage)</h3>
+          <b>Seller</b> : <a href="#">Aman Jaiswal</a><br><br>
+          <b>Subcategory</b> : Mobile <br>
+          <b>Used</b> : 2 years<br><br>
+          <font size="5"><b>Price</b> : Rs. 50,000</font>
+          <button class="view-more">View More</button>
+        </div>
+      </div>
+    </div>
+    <!-- content ends -->
+
+    <br>
+
+    <!-- content starts -->
+    <div class="single-content">
+      <div style="width:100%; height:300px; padding-top:50px" class="form-inline">
+        <div style="width:30%; height:250px">
+          <img style="width:80%; height:250px; border-radius:10px;" src="images/macbook.jpg" alt="">
+        </div>
+        <div style="width:70%; height:250px">
+          <h3>Apple MPXQ2HN/A Laptop (Core i5/8GB/128GB/Mac OS/Integrated Graphics), Space Grey</h3>
+          <b>Seller</b> : <a href="#">Namit Bhardwaj</a><br><br>
+          <b>Subcategory</b> : Laptop <br>
+          <b>Used</b> : 2 years<br><br>
+
+          <font size="5"><b>Price</b> : Rs. 99,999</font>
+          <button class="view-more">View More</button>
+        </div>
+      </div>
+    </div>
+    <!-- content ends -->
+  </div>
+
+
+  <!-- footer -->
+  <footer style="padding-top:80px">
+  <div class="footer-cpy p-lg-4 p-md-3 p-3 container-fluid">
+    <div class="row">
+      <div class="col-lg-6 copyrightbottom text-left">
+        <h3>
+          <a class="navbar-brand" href="index.html">IIT-Dh : Buy and Sell</a>
+        </h3>
+        <p>© 2018 <a href="http://www.iitdh.ac.in">IIT Dharwad</a> | Design by
+          <a href="mailto:160010004@iitdh.ac.in">Aman Jaiswal</a>,
+          <a href="mailto:160010036@iitdh.ac.in">Namit Bhardwaj</a>,
+          <a href="mailto:160030015@iitdh.ac.in">Kartik Kataria</a>
+        </p>
+      </div>
+
+      <div class="col-lg-6 copyrighttop mt-3 text-right">
+        <ul>
+          <li class="mx-3">
+            <a class="facebook" href="#">
+              <i class="fab fa-facebook-f"></i>
+              <a href="https://www.facebook.com/iitdharwadofficial">Facebook</a>
+            </a>
+          </li>
+          <li>
+            <a class="facebook" href="#">
+              <i class="fab fa-twitter"></i>
+              <a href="https://twitter.com/iitdhrwd">Twitter</a>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a class="facebook" href="#">
+              <i class="fab fa-youtube"></i>
+              <a href="https://www.youtube.com/channel/UCG_M5tP34-uO-Jkr9Q7VDsA">Youtube</a>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  </footer>
+  <!---->
+
+  <!-- /.footer -->
+  <script src="js/jquery-2.2.3.min.js"></script>
+
+  <!-- carousel -->
+  <script src="js/owl.carousel.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          },
+          600: {
+            items: 2,
+            nav: false
+          },
+          900: {
+            items: 3,
+            nav: false
+          },
+          1000: {
+            items: 4,
+            nav: true,
+            loop: false,
+            margin: 20
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //carousel -->
+  <!-- stats -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.countup.js"></script>
+  <script>
+    $('.counter').countUp();
+  </script>
+  <!-- //stats -->
+  <!-- flexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script>
+    $(window).load(function () {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function (slider) {
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+  <!-- //flexSlider -->
+  <!-- start-smooth-scrolling -->
+  <script src="js/move-top.js"></script>
+  <script src="js/easing.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+  <!-- //end-smooth-scrolling -->
+  <!-- dropdown nav -->
+  <script>
+    $(document).ready(function () {
+      $(".dropdown").hover(
+        function () {
+          $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+          $(this).toggleClass('open');
+        },
+        function () {
+          $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+          $(this).toggleClass('open');
+        }
+      );
+    });
+  </script>
+  <!-- //dropdown nav -->
+  <!-- smooth-scrolling-of-move-up -->
+  <script>
+    $(document).ready(function () {
+      /*
+      var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear'
+      };
+      */
+
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+  <!-- //smooth-scrolling-of-move-up -->
+  <script src="js/bootstrap.js"></script>
+  <!-- js file -->
+</body>
+
+</html>
